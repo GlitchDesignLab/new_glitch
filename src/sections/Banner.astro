@@ -1,0 +1,75 @@
+---
+import MainButton from "../components/buttons/MainButton.astro";
+---
+
+<section>
+  <h1>Dream Big with Bespoke Software Solutions</h1>
+  <p>
+    From startups to dreamers, we blend user-centered design with bespoke
+    software development to bring your ideas to life, scalable, affordable, and
+    uniquely yours.
+  </p>
+  <div class="buttons">
+    <MainButton href="#" target="_self" secondary>OUR WORK</MainButton>
+    <MainButton href="#" target="_self" primary>GET IN TOUCH</MainButton>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    height: 100vh;
+    padding: 1rem;
+    background-image: url("/public/images/hero_bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    h1 {
+      font-size: var(--font-size-lg);
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 600px;
+      color: var(--dark-text-color);
+      font-size: var(--font-size-sm);
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 570px) {
+    section {
+      padding: 2rem;
+      gap: 3rem;
+      h1 {
+        font-size: var(--font-size-xl);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    section {
+      gap: 4rem;
+      h1 {
+        font-size: var(--font-size-2xl);
+      }
+      p {
+        font-size: var(--font-size-md);
+      }
+      .buttons {
+        flex-direction: row;
+      }
+    }
+  }
+</style>
