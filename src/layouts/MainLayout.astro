@@ -21,7 +21,6 @@ const { title, description } = Astro.props;
 
 <style is:global>
   * {
-
     /* reset */
     margin: 0;
     padding: 0;
@@ -33,24 +32,29 @@ const { title, description } = Astro.props;
     --black-color: #000000;
     --primary-color: #8803ff;
     --secondary-color: #f469e2;
-    --terciary-color: #53009D;
-    --gray-color:#333333;
+    --terciary-color: #53009d;
+    --gray-color: #333333;
 
     /* fonts */
     --font-primary: "Montserrat", sans-serif;
 
-    /* Dekstop */
-    --main-titile: 2rem;
-    --subtitle:1.5rem;
-    --regular-text:1rem;
-    --eyebrow:0.8rem;
-
     /* Mobile */
-    --mobile-main-titile: 1.5rem;
-    --mobile-subtitle:1.2rem;
-    --mobile-regular-text:1rem;
-    --mobile-eyebrow:0.7rem;
+    --mobile-main-title: 2rem;
+    --mobile-subtitle: 1.5rem;
+    --mobile-regular-text: 0.9rem;
+    --mobile-eyebrow: 0.7rem;
 
+    /* Tablet */
+    --tablet-main-title: 2.5rem;
+    --tablet-subtitle: 1.2rem;
+    --tablet-regular-text: 1rem;
+    --tablet-eyebrow: 0.7rem;
+
+    /* Dekstop */
+    --desktop-main-title: 3.5rem;
+    --desktop-subtitle: 1.5rem;
+    --desktop-regular-text: 1rem;
+    --desktop-eyebrow: 0.8rem;
   }
   html {
     scroll-behavior: smooth;
