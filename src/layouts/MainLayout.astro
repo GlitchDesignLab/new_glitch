@@ -20,6 +20,78 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global>
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Geist";
+    src: url("/fonts/Geist-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
   * {
     /* reset */
     margin: 0;
@@ -36,7 +108,7 @@ const { title, description } = Astro.props;
     --gray-color: #333333;
 
     /* fonts */
-    --font-primary: "Montserrat", sans-serif;
+    --font-primary: "Geist", sans-serif;
 
     /* Mobile */
     --mobile-main-title: 2rem;
@@ -56,6 +128,7 @@ const { title, description } = Astro.props;
     --desktop-regular-text: 1rem;
     --desktop-eyebrow: 0.8rem;
   }
+
   html {
     scroll-behavior: smooth;
     background-color: var(--black-color);
