@@ -1,0 +1,187 @@
+---
+
+---
+
+<header id="header" class="header">
+  <nav>
+    <a href="#" class="logo">Glitch</a>
+
+    <button id="hamburger" class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+
+    <ul id="menu">
+      <li><a href="#" class="nav-link">Glitch</a></li>
+      <li><a href="#" class="nav-link">Pricing</a></li>
+      <li><a href="#" class="nav-link">Our Work</a></li>
+      <li><a href="#" class="nav-link">Get in Touch</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const header = document.getElementById("header");
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  /**
+   * Toggle menu on click
+   */
+  function toggleMenu() {
+    header?.classList.toggle("active");
+    if (header?.classList.contains("active")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }
+
+  if (header && menu && hamburger) {
+    // Toggle menu
+    hamburger.addEventListener("click", () => {
+      toggleMenu();
+    });
+
+    // Close menu on link click
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (header.classList.contains("active")) {
+          toggleMenu();
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .logo {
+        z-index: 999;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 2;
+
+        .bar {
+          width: 1.5rem;
+          height: 2px;
+          background-color: #ffffff;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+        list-style: none;
+        transition: all 0.45s ease-in-out;
+        transform: translateX(100%);
+
+        .nav-link {
+          color: #ffffff;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+
+  .header.active {
+    nav {
+      .hamburger {
+        position: relative;
+
+        .bar:nth-child(1) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(3) {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(-45deg);
+        }
+      }
+      ul {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .header {
+      nav {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .header {
+      nav {
+        padding: 2rem;
+        .hamburger {
+          display: none;
+        }
+        ul {
+          position: initial;
+          width: initial;
+          height: initial;
+          background-color: transparent;
+          flex-direction: row;
+          transform: translateX(0);
+
+          .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+</style>
