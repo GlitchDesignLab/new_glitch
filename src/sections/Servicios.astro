@@ -1,0 +1,54 @@
+---
+    import ProductCard from "../components/cards/ProductCard.astro";
+
+    const cardsInformation = [
+        {
+            title: "desarrollo de sitios web",
+            description: "Ready to start? Reach out to discuss your custom software needs, web design dreams, or any questions. We’re here to turn your ideas into reality with tailored solutions.",
+            price: "ARS$150.000",
+        },
+        {
+            title: "social media & content",
+            description: "Ready to start? Reach out to discuss your custom so   ftware needs, web design dreams, or any questions. We’re here to turn your ideas into reality with tailored solutions.",
+            price: "ARS$50.000",
+        },
+        {
+            title: "diseño de branding",
+            description: "Ready to start? Reach out to discuss your custom software needs, web design dreams, or any questions. We’re here to turn your ideas into reality with tailored solutions.",
+            price: "ARS$150.000",
+        },
+    ]
+---
+
+<section class="services_section">
+    <p class="services_section-eyebrow">Potencia tu marca</p>
+    <h2 class="services_section-title">
+        Nuestros Servicios
+    </h2>
+    <div class="services_section-wrapper">
+        {cardsInformation.map((card) => <ProductCard {...card} />)}
+    </div>
+</section>
+
+
+
+<style>
+    .services_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .services_section .services_section-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+</style>

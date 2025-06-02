@@ -1,0 +1,55 @@
+---
+import CardButton from "../buttons/CardButton.astro";
+const { title, description, price } = Astro.props;
+---
+
+<div class="card">
+    <h2 class="card-title">{title}</h2>
+    <p class="card-description">{description}</p>
+    <p class="card-eyebrow">Desde</p>
+    <p class="card-price">{price}</p>
+    <CardButton href="#">Contactanos</CardButton>
+</div>
+
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 3rem;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 460px;
+        border: var(--gray-color) solid 1px;
+    }
+
+    .card .card-title {
+        text-transform: uppercase;
+        font-size: var(--subtitle);
+    }
+    .card .card-description {
+        font-weight: 100;
+        font-size: var(--regular-text);
+    }
+
+    .card .card-eyebrow {
+        font-size: var(--eyebrow);
+        color: var(--secondary-color);
+        text-transform: uppercase;
+    }
+
+    /* Tablet */
+    @media screen and (min-width: 768px) {
+      
+        
+    }
+
+    /* Desktop */
+    @media screen and (min-width: 1024px) {
+        
+    }
+</style>
