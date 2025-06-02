@@ -33,6 +33,7 @@ import MainButton from "../components/buttons/MainButton.astro";
     h1 {
       font-size: var(--font-size-lg);
       text-transform: uppercase;
+      max-width: 700px;
     }
 
     p {
@@ -60,7 +61,7 @@ import MainButton from "../components/buttons/MainButton.astro";
 
   @media screen and (min-width: 768px) {
     section {
-      gap: 4rem;
+      gap: 3rem;
       h1 {
         font-size: var(--font-size-2xl);
       }
@@ -69,6 +70,18 @@ import MainButton from "../components/buttons/MainButton.astro";
       }
       .buttons {
         flex-direction: row;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    section {
+      h1 {
+        margin-top: 2rem;
+        font-size: var(--font-size-3xl);
+      }
+      p {
+        max-width: 800px;
       }
     }
   }
