@@ -31,18 +31,19 @@
     color: var(--light-text-color);
 
     h2 {
-      font-size: var(--font-size-lg);
+      font-size: var(--mobile-subtitle);
       text-transform: uppercase;
     }
     p {
       max-width: 600px;
+      font-size: var(--mobile-regular-text);
     }
     a {
       text-transform: uppercase;
       text-decoration: none;
       color: var(--light-text-color);
       font-weight: 600;
-      padding: 0.7rem 4rem;
+      padding: 0.9rem 4rem;
       background-color: #53009d;
       border-radius: 100px;
     }
@@ -51,6 +52,12 @@
   @media screen and (min-width: 768px) {
     section {
       padding: 4rem 2rem;
+      h2 {
+        font-size: var(--tablet-subtitle);
+      }
+      p {
+        font-size: var(--tablet-regular-text);
+      }
     }
   }
 
@@ -58,7 +65,10 @@
     section {
       padding: 6rem 0rem;
       h2 {
-        font-size: var(--font-size-2xl);
+        font-size: var(--desktop-subtitle);
+      }
+      p {
+        font-size: var(--desktop-regular-text);
       }
     }
   }
