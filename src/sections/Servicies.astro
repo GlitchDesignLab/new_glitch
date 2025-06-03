@@ -25,6 +25,9 @@
     <h2 class="services_section-title">
         Nuestros Servicios
     </h2>
+    <p class="services_section-description">
+        En Glitch Design Lab, nos dedicamos a ofrecer una amplia gama de servicios
+    </p>
     <div class="services_section-wrapper">
         {cardsInformation.map((card) => <ProductCard {...card} />)}
     </div>
@@ -41,6 +44,7 @@
         text-align: center;
         gap: 1rem;
         padding: 1rem;
+        margin: 2rem 0;
     }
     .services_section .services_section-wrapper {
         display: flex;
@@ -51,4 +55,62 @@
         gap: 1rem;
         padding: 1rem;
     }
+
+    .services_section .services_section-eyebrow {
+        color: var(--secondary-color);  
+        text-transform: uppercase;
+        font-size: var(--mobile-eyebrow);
+    }
+
+    .services_section-title {
+        font-size: var(--mobile-subtitle);
+    }
+    .services_section-description {
+        font-size: var(--mobile-regular-text);
+        font-weight: 100;
+    }
+
+    /* desktop */
+    @media screen and (min-width: 1080px) {
+        
+        .services_section .services_section-wrapper{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .services_section .services_section-eyebrow {
+        color: var(--secondary-color);  
+        text-transform: uppercase;
+        font-size: var(--desktop-eyebrow);
+        }
+
+        .services_section-title {
+            font-size: var(--desktop-subtitle);
+        }
+        .services_section-description {
+            font-size: var(--desktop-regular-text);
+            font-weight: 100;
+        }
+        
+    }
+
+    /* tablet */
+    @media screen and (min-width: 768px) {
+        
+        .services_section .services_section-eyebrow {
+        color: var(--secondary-color);  
+        text-transform: uppercase;
+        font-size: var(--tablet-eyebrow);
+        }
+
+        .services_section-title {
+            font-size: var(--tablet-subtitle);
+        }
+        .services_section-description {
+            font-size: var(--tablet-regular-text);
+            font-weight: 100;
+        }
+        
+    }
+
 </style>
