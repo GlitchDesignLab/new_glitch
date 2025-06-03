@@ -1,11 +1,18 @@
 ---
-const { href = "#", target = "_blank", primary, secondary } = Astro.props;
+const {
+  href = "#",
+  target = "_blank",
+  primary,
+  secondary,
+  ...props
+} = Astro.props;
 ---
 
 <a
   href={href}
   target={target}
-  class={primary ? "primary" : secondary ? "secondary" : ""}
+  class={primary ? "primary" : secondary ? "secondary" : "primary"}
+  {...props}
 >
   <slot />
 </a>
