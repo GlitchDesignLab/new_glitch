@@ -1,5 +1,5 @@
 ---
-
+import MainButton from "../components/buttons/MainButton.astro";
 ---
 
 <header id="header" class="header">
@@ -13,10 +13,12 @@
     </button>
 
     <ul id="menu">
-      <li><a href="#" class="nav-link">Glitch</a></li>
-      <li><a href="#" class="nav-link">Pricing</a></li>
-      <li><a href="#" class="nav-link">Our Work</a></li>
-      <li><a href="#" class="nav-link">Get in Touch</a></li>
+      <li class="nav-link"><a href="#" class="link">Glitch</a></li>
+      <li class="nav-link"><a href="#" class="link">Pricing</a></li>
+      <li class="nav-link"><a href="#" class="link">Our Work</a></li>
+      <li class="nav-link">
+        <MainButton href="#" target="_self" primary>Get in Touch</MainButton>
+      </li>
     </ul>
   </nav>
 </header>
@@ -114,7 +116,7 @@
         transition: all 0.45s ease-in-out;
         transform: translateX(100%);
 
-        .nav-link {
+        .link {
           color: #ffffff;
           text-decoration: none;
           transition: all 0.3s ease-in-out;
@@ -176,7 +178,7 @@
           flex-direction: row;
           transform: translateX(0);
 
-          .nav-link {
+          .link {
             color: #ffffff;
             text-decoration: none;
           }
