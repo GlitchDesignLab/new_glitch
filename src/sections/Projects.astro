@@ -1,0 +1,105 @@
+---
+import clImage from "../assets/projects/cl.png";
+import lsImage from "../assets/projects/ls.png";
+import profileImage from "../assets/projects/profile.png";
+import ProjectCard from "../components/cards/ProjectCard.astro";
+
+const projectList = [
+  {
+    id: 1,
+    title: "Cl Industrial Supply",
+    image: clImage,
+    href: "",
+  },
+  {
+    id: 2,
+    title: "Learning Spark",
+    image: lsImage,
+    href: "",
+  },
+  {
+    id: 3,
+    title: "Profile Up",
+    image: profileImage,
+    href: "",
+  },
+];
+---
+
+<section>
+  <h2>Webs recientes</h2>
+  <p>
+    Pick a plan that fits, from landing pages to institutional sites and
+    scalable ecommerce solutions. Our web design and development delivers
+    tailored results at budget-friendly prices.
+  </p>
+  <div class="projects">
+    {
+      projectList.map(({ title, image, href }) => (
+        <ProjectCard href={href} title={title} image={image} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 4rem 1rem;
+
+    h2 {
+      font-size: var(--mobile-subtitle);
+    }
+    p {
+      max-width: 600px;
+      font-size: var(--mobile-regular-text);
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    section {
+      h2 {
+        font-size: var(--tablet-subtitle);
+      }
+      p {
+        font-size: var(--tablet-regular-text);
+      }
+      .projects {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    section {
+      padding: 7rem 0rem;
+      h2 {
+        font-size: var(--desktop-subtitle);
+      }
+      p {
+        font-size: var(--desktop-regular-text);
+      }
+      .projects {
+        margin-top: 3rem;
+      }
+    }
+  }
+</style>
